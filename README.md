@@ -48,14 +48,26 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
    uv pip install langflow --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
    ```
 
-### Step 7: Resolve `google-cloud-aiplatform` Issues
+### Step 7: Resolve Other Dependency Issues
+1. If any other dependency throws an error during installation, follow these steps:
+   - Use `uv` to install the library directly:
+     ```bash
+     uv pip install {NAME OF LIBRARY} --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
+     ```
+   - Alternatively, copy the name of the library throwing the error and search for the appropriate file on [PyPI](https://pypi.org).
+   - Download the `.whl` file and install it using the following command:
+     ```bash
+     uv pip install /path/to/{LIBRARY_FILE}.whl --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
+     ```
+
+### Step 8: Resolve `google-cloud-aiplatform` Issues
 1. If you face issues with `google-cloud-aiplatform` version 1.75.0, download the `.whl` file from [PyPI](https://pypi.org/project/google-cloud-aiplatform/1.75.0/#files).
 2. Install the downloaded file:
    ```bash
    uv pip install /path/to/google_cloud_aiplatform-1.75.0-py2.py3-none-any.whl --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
    ```
 
-### Step 8: Start LangFlow
+### Step 9: Start LangFlow
 1. Start LangFlow using `uv`:
    ```bash
    uv run langflow run
@@ -63,9 +75,9 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
 2. Wait for LangFlow to boot completely.
 3. Once running, LangFlow will be hosted locally. You can access it at: [http://127.0.0.1:7860](http://127.0.0.1:7860).
 
-### Step 9: Import and Configure the Flow in LangFlow
+### Step 10: Import and Configure the Flow in LangFlow
 1. Open the LangFlow UI in your browser using the hosted link: [http://127.0.0.1:7860](http://127.0.0.1:7860).
-2. Click on **"Import Flow"** and upload the provided `.JSON` file.
+2. Click on **"Import Flow"** and upload the provided `.flow` file (downloadable [here](#)).
 3. After importing, review the flow configuration:
    - Adjust **parameters** such as API keys, endpoint URLs, or model details as required.
    - Verify all connections between nodes are correct.
@@ -74,7 +86,6 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
 **Screenshots:**
 - Below are screenshots showing the import process and key parameters to modify:
 
-*(Include screenshots in the repository or link them here.)*
 
 ---
 

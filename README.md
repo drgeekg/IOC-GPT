@@ -17,9 +17,10 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
    ```
 
 ### Step 3: Set Up Ollama Files
-1. Download the required files from [this link](#).
-2. Copy the downloaded files to the `.ollama` directory located in your user folder.
-3. Ensure Ollama is running by executing:
+1. Download the required files from [this link](https://drive.google.com/file/d/1rcsJ4Hu-YUfCdqQ3C7CMFTEI3qnDSXGa/view?usp=sharing).
+2. Extract the .rar file.
+3. Copy the exracted file to the `.ollama` directory located in your user folder. (Eg.  C:\Users\BRTH\.ollama)
+4. Ensure Ollama is running by executing:
    ```bash
    ollama start
    ```
@@ -33,16 +34,12 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
 ### Step 5: Create a Virtual Environment
 1. Use `uv` to create a virtual environment:
    ```bash
-   uv virtualenv .venv
+   uv venv
    ```
 2. Activate the virtual environment:
    - On Windows:
      ```bash
      .venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source .venv/bin/activate
      ```
 
 ### Step 6: Install LangFlow

@@ -52,7 +52,7 @@ This repository contains the code for the implementation of IOC GPT. Follow the 
 1. If you face issues with `google-cloud-aiplatform` version 1.75.0, download the `.whl` file from [PyPI](https://pypi.org/project/google-cloud-aiplatform/1.75.0/#files).
 2. Install the downloaded file:
    ```bash
-   uv pip install /path/to/google_cloud_aiplatform-1.75.0-py3-none-any.whl --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
+   uv pip install /path/to/google_cloud_aiplatform-1.75.0-py2.py3-none-any.whl --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host=files.pythonhosted.org
    ```
 
 ### Step 8: Start LangFlow

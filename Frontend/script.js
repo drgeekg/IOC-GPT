@@ -57,7 +57,7 @@ function fetchLangFlowResponse(userMessage) {
         headers: {
             "Authorization": "Bearer <TOKEN>", // Replace <TOKEN> with your actual token
             "Content-Type": "application/json",
-            "x-api-key": "<your api key>" // Replace <your api key> with your actual API key
+            "x-api-key": "sk-HTCwx4eEQ3vsOsmecuUnm0QUlOcSOYseNOZJe7RtTxk" // Replace <your api key> with your actual API key
         },
         body: JSON.stringify({
             input_value: userMessage,
@@ -97,7 +97,7 @@ function fetchLangFlowResponse(userMessage) {
         .catch((error) => {
             console.error("Error fetching response:", error);
             removeThinkingMessage();
-            displayMessage("Assistant", "Sorry, something went wrong.");
+            displayMessage("Assistant", );
         });
 }
 
@@ -111,7 +111,7 @@ function extractBotResponse(data) {
             
             // Check for the nested output's structure
             if (nestedOutputs && Array.isArray(nestedOutputs) && nestedOutputs.length > 0) {
-                const textData = nestedOutputs[0]?.results?.text?.data?.text;
+                const textData = nestedOutputs[0]?.results?.message?.data?.text;
                 
                 // If the expected text exists, return it
                 if (textData) {
